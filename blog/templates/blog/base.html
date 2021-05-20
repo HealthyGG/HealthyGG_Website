@@ -1,0 +1,189 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <!-- Roboto -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono|Roboto:400,700&display=swap&subset=latin-ext" rel="stylesheet">
+    <!-- Vollkorn -->
+    <link href="https://fonts.googleapis.com/css2?family=Vollkorn:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <!-- FontAwesome -->
+    <script src="https://kit.fontawesome.com/521d3ec120.js" crossorigin="anonymous"></script>
+
+    <!-- My CSS -->
+    <link rel="stylesheet" href="{% static 'blog/css/normalize.min.css' %}">
+    <!-- <link rel="stylesheet" href="{% static 'blog/fontawesome/all.css' %}"> -->
+    <link rel="stylesheet" href="{% static 'blog/css/main.css' %}">
+
+    <!-- MathJax configuration -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS_HTML"></script>
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+            displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+            processEscapes: true,
+            processEnvironments: true
+        },
+        // Center justify equations in code and markdown cells. Elsewhere
+        // we use CSS to left justify single line equations in code cells.
+        displayAlign: 'center',
+        "HTML-CSS": {
+            styles: {'.MathJax_Display': {"margin": 0}},
+            linebreaks: { automatic: true }
+        }
+    });
+    </script>
+
+    {% if title %}
+    <title>Andrzej "Kaszanas" Białecki - Andbit</title>
+    {% else %}
+    <title>Andrzej "Kaszanas" Białecki - Andbit</title>
+    {% endif %}
+
+</head>
+
+<body>
+
+    <!-- Logo Top Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark main_head">
+        <div class="container-fluid" style="padding: 0;">
+            <div class="d-flex w-100">
+                <div class="col-md-2"></div>
+                <div class="flex-column flex-fill">
+                        <div class="row">
+                          <div class="col-sm-2 mr-auto" style="padding-right: 1rem; padding-left: 1rem;">
+                            <div id="logoCarouselNavbar" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                                <div class="logo_container" >
+                                    <a href="/">
+                                        <img src="{% static 'blog/img/logo.png' %}" alt="logo" width="75%" height="75%">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+                <div class="offset-md-2"></div>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Navigation -->
+    <div>
+        <div class="nav main_nav">
+            <div class="col-md-2"></div>
+            <div class="d-flex flex-column flex-fill" style="padding-left: 0.5rem; padding-right: 0.5rem;">
+                <div class="row justify-content-between">
+
+                    <!-- Main Navigation -->
+                    <div class="col-auto mr-auto" style="padding: 0;">
+                        <div>
+                            <ul class="nav justify-content-start flex-nowrap">
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="/">Blog</a>
+                                </li>
+                                <li class="nav-item flex flex-nowrap">
+                                    <a class="nav-link" href="/about">About Me</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="https://drive.google.com/file/d/1yucFDw74tDBomHwDNU2LjIguvp82v525/preview" target="_blank">Experience</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Social Media Links -->
+                    <div class="col-auto justify-content-end" style="padding: 0;">
+                        <ul class="nav flex-nowrap justify-content-end social_media_items">
+                            <li class="nav-item">
+                                <a class="nav-link" href="https://twitter.com/Kaszanas" target="_blank">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="https://www.linkedin.com/in/andrzej-bialecki/" target="_blank">
+                                    <i class="fab fa-linkedin"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="https://github.com/Kaszanas" target="_blank">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="https://www.facebook.com/Kaszanas" target="_blank">
+                                    <i class="fab fa-facebook"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="https://www.instagram.com/kaszanas" target="_blank">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="offset-md-2"></div>
+        </div>
+    </div>
+
+    <!-- Content -->
+    <div id="content_container" class="d-flex justify-content-center" style="margin-top: 0.75rem;">
+
+        {% block content %}
+        {% endblock%}
+
+    </div>
+
+<!-- Footer -->
+<footer class="d-flex pt-2 border-top main_footer fixed-bottom">
+    <div class="container-fluid">
+        <div class="d-flex m-2 w-100">
+            
+            <div class="col-md-2"></div>
+            <div class="d-flex flex-column flex-fill">
+
+            <div class="d-flex flex-row">
+            <div class="flex-column" style="padding-right: 0.5rem;">
+                <div id="logoCarouselFooter" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                    <div class="logo_container">
+                        <a href="/">
+                            <img src="{% static 'blog/img/logo.png' %}" alt="logo" width="75%" height="75%">
+                        </a>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <small class="text-muted">&copy; 2015-{% now "Y" %}</small>
+                </div>
+            </div>
+            <div class="col pt-2" style="margin-left: 0.5rem;">
+                <h5>Site</h5>
+                <ul class="list-unstyled text-small">
+                <li><a class="text-muted" href="/">Blog</a></li>
+                <li><a class="text-muted" href="/about">About Me</a></li>
+                <li><a class="text-muted" href="https://drive.google.com/file/d/1yucFDw74tDBomHwDNU2LjIguvp82v525/preview" target="_blank">Experience</a></li>
+                </ul>
+            </div>
+            </div>
+
+            </div>
+        </div>
+    </div>
+
+  </footer>
+
+</body>
+
+</html>
