@@ -1,3 +1,3 @@
-## Kaszanas Website
+## HealthyGG/ZdrowiGracze Website
 
-Personal website created with Django
+Project website created with Django.
