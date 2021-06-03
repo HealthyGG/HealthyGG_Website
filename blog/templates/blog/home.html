@@ -20,7 +20,11 @@
                 <div class="flex-row justify-content-between">
                     <div class="flex-column">
                         <!-- Author Information -->
-                        <p class="post_meta"><i class="fa fa-user"></i> <a href="/about">{{ post.author}}</a> / <i class="fa fa-calendar"></i> {{ post.publish|date:'Y-m-d' }}</p>
+                        <p class="post_meta">
+                          <i class="fa fa-user"></i> 
+                          <a href="/about">{{post.author.all|join:", "}}</a>
+                          / <i class="fa fa-calendar"></i> {{ post.publish|date:'Y-m-d' }}
+                        </p>
                     </div>
                 </div>
                 <hr>

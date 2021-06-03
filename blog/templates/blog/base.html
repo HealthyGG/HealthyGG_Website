@@ -106,27 +106,27 @@
                     <div class="col-auto justify-content-end" style="padding: 0;">
                         <ul class="nav flex-nowrap justify-content-end social_media_items">
                             <li class="nav-item" style="margin-left: 0.35rem;">
-                                <a class="nav-link" href="https://twitter.com/Kaszanas" target="_blank">
+                                <a class="nav-link" href="https://twitter.com/ZdrowiGracze" target="_blank">
                                     <i class="fab fa-twitter"></i>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="https://www.linkedin.com/in/andrzej-bialecki/" target="_blank">
+                                <a class="nav-link" href="https://www.linkedin.com/company/zdrowigracze/" target="_blank">
                                     <i class="fab fa-linkedin"></i>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="https://github.com/Kaszanas" target="_blank">
+                                <a class="nav-link" href="https://github.com/HealthyGG" target="_blank">
                                     <i class="fab fa-github"></i>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="https://www.facebook.com/Kaszanas" target="_blank">
+                                <a class="nav-link" href="https://www.facebook.com/ZdrowiGracze" target="_blank">
                                     <i class="fab fa-facebook"></i>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="https://www.instagram.com/kaszanas" target="_blank">
+                                <a class="nav-link" href="https://www.instagram.com/zdrowigracze" target="_blank">
                                     <i class="fab fa-instagram"></i>
                                 </a>
                             </li>
@@ -149,7 +149,8 @@
     </div>
 
 <!-- Footer -->
-<footer class="d-flex pt-2 border-top main_footer fixed-bottom">
+
+<footer class="d-flex pt-2 border-top main_footer">
     <div class="container-fluid">
         <div class="d-flex m-2 w-100">
             
@@ -159,14 +160,16 @@
             <div class="d-flex flex-row">
             <div class="flex-column" style="padding-right: 0.5rem;">
                 <div id="logoCarouselFooter" class="carousel slide carousel-fade" data-bs-ride="carousel">
-                    <div class="logo_container">
-                        <a href="/">
-                            <img src="{% static 'blog/img/logo.png' %}" alt="logo" width="75%" height="75%">
-                        </a>
+                    <div class="carousel-inner logo_container" role="listbox">
+                        <div class="logo_container">
+                            <a href="/">
+                                <img src="{% static 'blog/img/logo.png' %}" alt="logo" width="75%" height="75%">
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <div class="text-center">
-                    <small class="text-muted">&copy; 2015-{% now "Y" %}</small>
+                    <small class="text-muted">&copy; 2020-{% now "Y" %}</small>
                 </div>
             </div>
             <div class="col pt-2" style="margin-left: 0.5rem;">
@@ -183,8 +186,6 @@
         </div>
     </div>
 
-  </footer>
-
+</footer>
 </body>
-
 </html>
